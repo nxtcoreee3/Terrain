@@ -5,12 +5,7 @@
   <h1>Terrain</h1>
   <p>iOS customization toolbox using the <a href="https://github.com/forcequitOS/worse_query">worse_query</a> sandbox escape. Fork of <a href="https://github.com/jailbreakdotparty/Erosion">Erosion</a> by <a href="https://github.com/nxtcoreee3">nxtcoreee3</a>.</p>
   <p>Supports iOS 26.0 - 26.7.2 & iOS 27.0 - 27.2.1.</p>
-  <a href="https://github.com/jailbreakdotparty/Erosion/releases/latest"><img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/jailbreakdotparty/Erosion/total?style=flat-square&color=007AFF"></a>
-  <a href="https://github.com/jailbreakdotparty/Erosion/stargazers"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jailbreakdotparty/erosion?style=flat-square&color=%23FFD300"></a> 
-  <a href="https://jailbreak.party/discord"><img alt="Discord" src="https://img.shields.io/discord/1349128546072793218?style=flat-square&logo=discord&logoColor=FFFFFF&color=5865F2"></a> 
-  <a href="https://jailbreak.party"><img alt="Static Badge" src="https://img.shields.io/badge/jailbreak.party-blue?style=flat-square&label=%20&color=3868DB"></a>
-</div>
-
+ 
 ### About this fork
 Terrain is a community fork of [Erosion](https://github.com/jailbreakdotparty/Erosion), originally created and maintained by the Erosion contributors. This fork is maintained by [nxtcoreee3](https://github.com/nxtcoreee3) and keeps Erosion's core project while developing Terrain-specific changes separately.
 
