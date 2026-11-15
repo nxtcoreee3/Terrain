@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <a href="https://jailbreak.party/discord"><img src="https://github.com/jailbreakdotparty/Erosion/blob/main/PreviewIcon.png?raw=true" alt="App Icon" width="150"></a>
+  <a href="https://nxtcoreee3.online"><img src="https://github.com/jailbreakdotparty/Erosion/blob/main/PreviewIcon.png?raw=true" alt="App Icon" width="150"></a>
   <br>
   <h1>Terrain</h1>
   <p>iOS customization toolbox using the <a href="https://github.com/forcequitOS/worse_query">worse_query</a> sandbox escape. Fork of <a href="https://github.com/jailbreakdotparty/Erosion">Erosion</a> by <a href="https://github.com/nxtcoreee3">nxtcoreee3</a>.</p>
