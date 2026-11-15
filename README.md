@@ -14,7 +14,7 @@
 ### About this fork
 Terrain is a community fork of [Erosion](https://github.com/jailbreakdotparty/Erosion), originally created and maintained by the Erosion contributors. This fork is maintained by [nxtcoreee3](https://github.com/nxtcoreee3) and keeps Erosion's core project while developing Terrain-specific changes separately.
 
-Compared with upstream Erosion, Terrain is rebranded and adds the nxtcoreee3.online wallpaper catalog to the PosterBoard Tendies Library. Its packs and available variants can be previewed in-app, downloaded, imported, and automatically selected for applying. The source catalog is available at [nxtcoreee3.online/wallpapers](https://www.nxtcoreee3.online/wallpapers).
+Compared with upstream Erosion, Terrain is rebranded and adds an entire tendies collection right inside the app, so you can browse and find the perfect wallpaper for your device.
 
 For the original project and its upstream documentation, see [jailbreakdotparty/Erosion](https://github.com/jailbreakdotparty/Erosion).
 
