@@ -2,14 +2,21 @@
   <br>
   <a href="https://jailbreak.party/discord"><img src="https://github.com/jailbreakdotparty/Erosion/blob/main/PreviewIcon.png?raw=true" alt="App Icon" width="150"></a>
   <br>
-  <h1>Erosion</h1>
-  <p>iOS customization toolbox using the <a href="https://github.com/forcequitOS/worse_query">worse_query</a> sandbox escape.</p>
+  <h1>Terrain</h1>
+  <p>iOS customization toolbox using the <a href="https://github.com/forcequitOS/worse_query">worse_query</a> sandbox escape. Fork of <a href="https://github.com/jailbreakdotparty/Erosion">Erosion</a> by <a href="https://github.com/nxtcoreee3">nxtcoreee3</a>.</p>
   <p>Supports iOS 26.0 - 26.7.2 & iOS 27.0 - 27.2.1.</p>
-  <a href="https://github.com/jailbreakdotparty/Erosion/releases/latest"><img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/jailbreakdotparty/Erosion/total?style=flat-square&color=CF7D46"></a>
+  <a href="https://github.com/jailbreakdotparty/Erosion/releases/latest"><img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/jailbreakdotparty/Erosion/total?style=flat-square&color=007AFF"></a>
   <a href="https://github.com/jailbreakdotparty/Erosion/stargazers"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jailbreakdotparty/erosion?style=flat-square&color=%23FFD300"></a> 
   <a href="https://jailbreak.party/discord"><img alt="Discord" src="https://img.shields.io/discord/1349128546072793218?style=flat-square&logo=discord&logoColor=FFFFFF&color=5865F2"></a> 
   <a href="https://jailbreak.party"><img alt="Static Badge" src="https://img.shields.io/badge/jailbreak.party-blue?style=flat-square&label=%20&color=3868DB"></a>
 </div>
+
+### About this fork
+Terrain is a community fork of [Erosion](https://github.com/jailbreakdotparty/Erosion), originally created and maintained by the Erosion contributors. This fork is maintained by [nxtcoreee3](https://github.com/nxtcoreee3) and keeps Erosion's core project while developing Terrain-specific changes separately.
+
+Compared with upstream Erosion, Terrain is rebranded and adds the nxtcoreee3.online wallpaper catalog to the PosterBoard Tendies Library. Its packs and available variants can be previewed in-app, downloaded, imported, and automatically selected for applying. The source catalog is available at [nxtcoreee3.online/wallpapers](https://www.nxtcoreee3.online/wallpapers).
+
+For the original project and its upstream documentation, see [jailbreakdotparty/Erosion](https://github.com/jailbreakdotparty/Erosion).
 
 ### Before you begin...
 - Please create a backup of your device before usage! While Erosion has been extensively tested, there is still a possibility that you could lose your data by using this tool.
@@ -33,6 +40,7 @@ Expect that to change in the short future.
 4. **Why does the app hang when opening Custom Wallpapers or Dialer Themer?** When you open these tweaks for the first time, Erosion starts automatically detecting the app container paths. Unfortunately, the method currently used to detect these is annoyingly slow. It should complete in ~30 seconds, and this setup is only required once.
 
 ### Credits
+- [nxtcoreee3](https://github.com/nxtcoreee3) - Erosion fork (Terrain).
 - [lunginspector](https://github.com/lunginspector) - Primary developer and maintainer.
 - [forcequit](https://github.com/forcequitOS) - worse_query sandbox escape and container enumeration strategy.
 - [0xjohnny](https://github.com/0xjohnnydev) - worse_query sandbox escape.
