@@ -1,39 +1,33 @@
 {
   "fill" : {
     "linear-gradient" : [
-      "display-p3:0.81176,0.49020,0.27451,1.00000",
-      "srgb:0.45098,0.27059,0.16863,1.00000"
+      "display-p3:0.59178,0.93167,0.97706,1.00000",
+      "display-p3:0.14663,0.45251,0.66647,1.00000"
     ]
   },
   "groups" : [
     {
       "layers" : [
         {
-          "image-name" : "handle.svg",
-          "name" : "handle",
+          "hidden" : false,
+          "image-name" : "SF-Pro-Display • mountain.2.fill-1.png",
+          "name" : "snow",
           "position" : {
-            "scale" : 1,
+            "scale" : 0.17,
             "translation-in-points" : [
-              -64.85482206999995,
-              -64.86242206999998
+              -21.1015625,
+              -78.96500000000003
             ]
           }
         },
         {
-          "fill-specializations" : [
-            {
-              "appearance" : "dark",
-              "value" : "none"
-            }
-          ],
-          "hidden" : false,
-          "image-name" : "Plate.svg",
-          "name" : "Plate",
+          "image-name" : "SF-Pro-Display • mountain.2.fill.png",
+          "name" : "mountain",
           "position" : {
-            "scale" : 1,
+            "scale" : 0.17,
             "translation-in-points" : [
-              129.39107576502488,
-              129.75558675163995
+              0,
+              0
             ]
           }
         }

@@ -68,7 +68,7 @@ struct ErosionApp: App {
                     }
                 }
                 print("")
-                print("[*] Erosion v\(AppInfo.appVersion) (\(build))")
+                print("[*] Terrain v\(AppInfo.appVersion) (\(build))")
                 print("[*] Running on \(UIDevice.current.systemName) \(UIDevice.current.systemVersion), \(machineName())")
                 if !isSupported() && !AppInfo.isDebug {
                     Alertinator.shared.alert(title: "Your \(device.systemName) version is not supported!", body: AppMsg.unsupported, showCancel: false, actionLabel: "Exit", action: { exitinator() })
@@ -76,7 +76,7 @@ struct ErosionApp: App {
                 group = wq.getAppGroup()
                 if group == "group.com.jbdotparty.Erosion.WQ" && !AppInfo.isDebug {
                     // Idiot checker - Skadz 2026-11-09
-                    Alertinator.shared.alert(title: "Using default App Group!", body: "Erosion was unable to detect its App Group ID and will be using a default value. The exploit will likely fail and tweaks will not work. If you are using LiveContainer or a paid/enterprise certificate, that is likely causing this issue. It is recommended to install Erosion using your own Apple ID and a reliable tool of choice. Please do not ask for support if things are not working.", showCancel: false, actionLabel: "I understand and will not complain.", action: {})
+                    Alertinator.shared.alert(title: "Using default App Group!", body: "Terrain was unable to detect its App Group ID and will be using a default value. The exploit will likely fail and tweaks will not work. If you are using LiveContainer or a paid/enterprise certificate, that is likely causing this issue. It is recommended to install Terrain using your own Apple ID and a reliable tool of choice. Please do not ask for support if things are not working.", showCancel: false, actionLabel: "I understand and will not complain.", action: {})
                 }
                 print("(wq) Using app group: \(group)")
             }

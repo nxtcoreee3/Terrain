@@ -28,6 +28,7 @@ struct PosterBoardView: View {
     @AppStorage("hasShownFirstRunMsg") private var hasShownFirstRunMsg = false
     
     @State private var showImporter = false
+    @State private var showExplorer = false
     let columns = Array(repeating: GridItem(.flexible()), count: device.userInterfaceIdiom == .pad ? 4 : 2)
     
     var body: some View {
@@ -43,16 +44,11 @@ struct PosterBoardView: View {
             } else {
                 ScrollView {
                     if tendiesArray.isEmpty {
-                        Button {
-                            showImporter = true
-                        } label: {
-                            VStack(alignment: .leading) {
-                                CompactAlert(title: "No tendies imported!", symbol: "exclamationmark.triangle.fill", text: PBMsg.noTendies)
-                                    .padding(.horizontal, 15)
-                            }
-                            .frame(alignment: .leading)
-                            .multilineTextAlignment(.leading)
+                        VStack(spacing: 12) {
+                            CompactAlert(title: "No tendies imported!", symbol: "exclamationmark.triangle.fill", text: PBMsg.noTendies)
+                                .padding(.horizontal, 15)
                         }
+                        .padding(.vertical, 8)
                     }
                     LazyVGrid(columns: columns) {
                         ForEach($tendiesArray) { $tendies in
@@ -141,11 +137,16 @@ struct PosterBoardView: View {
         }
         .safeAreaInset(edge: .bottom) {
             if isReady {
-                VStack {
+                HStack(spacing: 10) {
+                    Button {
+                        showExplorer = true
+                    } label: {
+                        ButtonLabel("Explore Tendies", symbol: "sparkles")
+                    }
                     Button {
                         showImporter = true
                     } label: {
-                        ButtonLabel("Import .tendies", symbol: "arrow.down.doc")
+                        ButtonLabel("Import File", symbol: "arrow.down.doc")
                     }
                 }
                 .buttonStyle(ActionButtonStyle())
@@ -156,6 +157,13 @@ struct PosterBoardView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
+                    Button {
+                        showExplorer = true
+                    } label: {
+                        Label("Explore Tendies", systemImage: "sparkles")
+                    }
+                    .disabled(!isReady)
+
                     Button {
                         showImporter = true
                     } label: {
@@ -263,6 +271,9 @@ struct PosterBoardView: View {
                 Alertinator.shared.alert(title: "Failed to import .tendies!", body: PBMsg.imprtFailed)
             }
         }
+        .sheet(isPresented: $showExplorer) {
+            TendiesExplorerView(tendiesArray: $tendiesArray)
+        }
     }
     
     private func doSetupStuff() {
@@ -343,4 +354,3 @@ struct PosterBoardView: View {
         }
     }
 }
-

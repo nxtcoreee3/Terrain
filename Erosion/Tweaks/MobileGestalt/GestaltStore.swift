@@ -72,6 +72,9 @@ enum MGKey {
     static let grapPefr = "oOV1jhJbdV3AddkcCg0AEA" // apple-graphics-performance-tier
     static let actButton = "cT44WE1EohiwRzhsZ8xEsw" // RingerButtonCapability
     static let tapToWake = "yZf3GTRMGTuwSV/lD7Cagw" // DeviceSupportsTapToWake
+    static let parallax = "UIParallaxCapability" // UIParallaxCapability
+    static let liquidGlassLowPerf = "SAGvsp6O6kAQ4fEfDJpC4Q" // Liquid Glass Low-Performance
+    static let allowIPadApps = "9MZ5AdH43csAUajl/dU+IQ" // Allow iPad Apps
     
     // ipados
     static let stageMgr = "qeaj75wk3HF4DwQ8qbIi7g" // DeviceSupportsEnhancedMultitasking
@@ -246,5 +249,37 @@ final class GestaltStore: ObservableObject {
         
         mgCurrentDict["CacheData"] = updatedData
         return true
+    }
+
+    func mgParallaxDisableBinding() -> Binding<Bool> {
+        return Binding(get: {
+            if let value = self.cacheExtra[MGKey.parallax] as? Int {
+                return value == 0
+            }
+            return false
+        }, set: { disable in
+            self.objectWillChange.send()
+            if disable {
+                self.cacheExtra[MGKey.parallax] = 0
+            } else {
+                self.cacheExtra.removeObject(forKey: MGKey.parallax)
+            }
+        })
+    }
+
+    func mgAllowIPadAppsBinding() -> Binding<Bool> {
+        return Binding(get: {
+            if let arr = self.cacheExtra[MGKey.allowIPadApps] as? [Int] {
+                return arr == [1, 2]
+            }
+            return false
+        }, set: { enable in
+            self.objectWillChange.send()
+            if enable {
+                self.cacheExtra[MGKey.allowIPadApps] = [1, 2]
+            } else {
+                self.cacheExtra.removeObject(forKey: MGKey.allowIPadApps)
+            }
+        })
     }
 }

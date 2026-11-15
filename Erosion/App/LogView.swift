@@ -34,7 +34,7 @@ struct LogView: View {
                             formatter.dateFormat = "MM-dd-yyyy-HHmmss"
                             let date = formatter.string(from: Date())
                             
-                            let tempURL = URL.temporaryDirectory.appendingPathComponent("Erosion-Log-\(date)").appendingPathExtension("txt")
+                            let tempURL = URL.temporaryDirectory.appendingPathComponent("Terrain-Log-\(date)").appendingPathExtension("txt")
                             guard let data = mgr.logOutput.data(using: .utf8) else {
                                 throw "failed to create data from log string"
                             }

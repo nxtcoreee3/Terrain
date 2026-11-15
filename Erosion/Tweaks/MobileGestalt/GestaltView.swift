@@ -73,6 +73,10 @@ struct GestaltView: View {
                     if mgEnableDeviceName {
                         TextField("Device Name", text: $mgDeviceName)
                     }
+                    PlainToggle("Disable Wallpaper Parallax", isOn: store.mgParallaxDisableBinding())
+                    if doubleSysVrs() >= 19.0 || mgOverrideGates {
+                        PlainToggle("Liquid Glass Low-Perf Mode", minVrs: 19.0, isOn: store.mgKeyBinding([MGKey.liquidGlassLowPerf]))
+                    }
                 } header: {
                     HeaderLabel("Artwork", symbol: "paintbrush.pointed")
                 }
@@ -193,6 +197,7 @@ struct GestaltView: View {
                     }
                     if store.strVal(forKey: MGKey.deviceClass) == "iPhone" || mgOverrideGates {
                         PlainToggle("Enable iPadOS UI", infoType: .warning, infoMessage: MGMsg.ipadOS, isOn: store.mgTrollPadBinding())
+                        PlainToggle("Allow iPad Apps", isOn: store.mgAllowIPadAppsBinding())
                     }
                 } header: {
                     HeaderLabel("iPadOS", symbol: "ipad")
@@ -226,6 +231,10 @@ struct GestaltView: View {
                         }
                         
                         Divider()
+                        
+                        NavigationLink(destination: CEView()) {
+                            Label("CacheExtra Editor", systemImage: "tablecells.badge.ellipsis")
+                        }
                         
                         if showCustomKeys {
                             NavigationLink(destination: CustomKeyView()) {

@@ -31,7 +31,7 @@ struct ContentView: View {
                     HeaderLabel("Actions", symbol: "gearshape")
                 }
             }
-            .navigationTitle("Erosion")
+            .navigationTitle("Terrain")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

@@ -23,6 +23,7 @@ struct TweaksView: View {
                     if raveSupported() || AppInfo.isDebug {
                         NavigationLink("MobileGestalt", destination: GestaltView())
                     }
+                    NavigationLink("Santander Browser", destination: SantanderView())
                     NavigationLink("Config Tweaks", destination: ConfigView())
                     NavigationLink("File Operations", destination: OperationsView())
                 } header: {
